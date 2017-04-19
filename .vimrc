@@ -1,3 +1,6 @@
+" vim:foldmethod=marker:foldlevel=0
+
+" Vundle Setup & Plugins {{{
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -32,6 +35,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+" }}}
 
 source $HOME/.config/vim/general.vimrc
 source $HOME/.config/vim/keys.vimrc
