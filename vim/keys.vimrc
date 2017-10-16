@@ -1,3 +1,17 @@
+" disable arrow keys
+:noremap <Up> <Nop>
+:noremap <Down> <Nop>
+:noremap <Left> <Nop>
+:noremap <Right> <Nop>
+
+" remap arrow keys in normal mode
+" buffer next & prev
+:nnoremap <Up> :bn<cr>
+:nnoremap <Down> :bp<cr>
+" tab next & prev
+:nnoremap <Left> :tabnnext<cr>
+:nnoremap <Right> :tabprev<cr>
+
 " congigure backspace to be normal
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
