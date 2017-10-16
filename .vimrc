@@ -13,11 +13,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'https://github.com/vim-syntastic/syntastic'
 Plugin 'https://github.com/tpope/vim-fugitive'
+Plugin 'https://github.com/airblade/vim-gitgutter'
 Plugin 'https://github.com/scrooloose/nerdtree'
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
+Plugin 'https://github.com/vim-airline/vim-airline'
+Plugin 'https://github.com/vim-airline/vim-airline-themes'
+Plugin 'https://github.com/tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
