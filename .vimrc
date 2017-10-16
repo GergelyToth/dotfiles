@@ -36,8 +36,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " }}}
 
-source $HOME/.config/vim/general.vimrc
-source $HOME/.config/vim/keys.vimrc
-source $HOME/.config/vim/ui.vimrc
-source $HOME/.config/vim/plugins.vimrc
+source $HOME/dotfiles/vim/general.vimrc
+source $HOME/dotfiles/vim/keys.vimrc
+source $HOME/dotfiles/vim/ui.vimrc
+source $HOME/dotfiles/vim/plugins.vimrc
 
+set guicursor=
