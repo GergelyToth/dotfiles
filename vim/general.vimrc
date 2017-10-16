@@ -7,8 +7,8 @@ filetype plugin indent on
 set autoread
 
 " set line numbers
-set nu
-set nuw=4
+set number
+set numberwidth=4
 set relativenumber
 set cursorline
 
@@ -20,13 +20,13 @@ set cmdheight=2
 set nrformats=
 
 set encoding=utf8
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 
 " turn on the wild menu
 set wildmenu
 
 " buffer becomes hidden when it is abandoned
-set hid
+set hidden
 
 " keep more history
 set history=100
@@ -51,25 +51,25 @@ set magic
 
 " turn backup off
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 
 " Text & Tabs & Indent
 set smarttab
 set shiftwidth=4
 set tabstop=4
-set ai " auto indent
-set si " smart indent
-set wrap " wrap lines
+set autoindent
+set smartindent
+set wrap
 
 " linebreak on 500 chars
-set lbr
-set tw=500
+set linebreak
+set textwidth=500
 
 " specify behaviour when switching between buffers
 try
 	set switchbuf=useopen, usetab, newtab
-	set stal=2
+	set showtabline=2
 catch
 endtry
 
