@@ -1,5 +1,3 @@
-" vim:foldmethod=marker:foldlevel=0
-
 " Vundle Setup & Plugins {{{
 set nocompatible              " be iMproved, required
 filetype off                  " required

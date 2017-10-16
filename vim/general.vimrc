@@ -92,3 +92,7 @@ set wildmode=longest,list:longest
 " :h 'completeopt'
 set completeopt=menu,preview
 
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
