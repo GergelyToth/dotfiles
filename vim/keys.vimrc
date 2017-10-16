@@ -23,6 +23,9 @@ let g:maplocalleader = "\\"
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" easier esc from insert
+:inoremap jj <esc>
+:inoremap kk <esc>
 
 " fast saving
 nnoremap <leader>w :w!<cr>
@@ -69,14 +72,12 @@ set foldmethod=indent
 nnoremap <space> za
 vnoremap <space> zf
 
-" F12 to source the vimrc file
-map <F12> :source ~/.vimrc<cr>
-" F10 to open vimrc
-map <F10> :e ~/.vimrc<cr>
-" F9 to get to edit the separate vim configs
-map <F9> :e ~/.config/vim/
+" easier vimrc file editing
+noremap <leader>ev :vsplit $MYVIMRC<cr>
+noremap <leader>sv :source $MYVIMRC<cr>
 
-" Tab for vim's own auto complete
-imap <Tab> <C-P>
-
-
+augroup comments_shortcuts
+	autocmd FileType javascript nnoremap <buffer> <localleader>c I// <esc>
+	autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
+	autocmd FileType vim        nnoremap <buffer> <localleader>c I" <esc>
+augroup END
