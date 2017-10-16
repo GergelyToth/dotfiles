@@ -7,44 +7,44 @@ let mapleader = ","
 let g:mapleader = ","
 
 " fast saving
-nmap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
 
 " disable highlight when <leader><cr> is pressed (,+Enter)
-map <silent> <leader><cr> :noh<cr>
+noremap <silent> <leader><cr> :noh<cr>
 
 " smart way to move between widows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
 
 " managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
+noremap <leader>tn :tabnew<cr>
+noremap <leader>tc :tabclose<cr>
+noremap <leader>to :tabonly<cr>
+noremap <leader>tm :tabmove
+noremap <leader>t<leader> :tabnext
 
 " open a new tab with the current buffer's path
 " super useful when editing files in the same dir
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>
+noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>
 
 " switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Spell checking
-map <F5> :setlocal spell!<cr>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+noremap <F5> :setlocal spell!<cr>
+noremap <leader>sn ]s
+noremap <leader>sp [s
+noremap <leader>sa zg
+noremap <leader>s? z=
 
 " NERDTree shortcuts
-map <leader>nt :NERDTreeToggle<CR>
-map <leader>nf :NERDTreeFind<CR>
+noremap <leader>nt :NERDTreeToggle<CR>
+noremap <leader>nf :NERDTreeFind<CR>
 
 " CTRL+P
-map <c-p> :CtrlP<CR>
+noremap <c-p> :CtrlP<CR>
 
 " Autofold indent code with space
 set foldmethod=indent
