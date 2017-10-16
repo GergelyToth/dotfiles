@@ -19,6 +19,9 @@ Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
 Plugin 'https://github.com/vim-airline/vim-airline'
 Plugin 'https://github.com/vim-airline/vim-airline-themes'
 Plugin 'https://github.com/tpope/vim-surround'
+Plugin 'https://github.com/junegunn/goyo.vim'
+Plugin 'https://github.com/tpope/vim-surround'
+Plugin 'https://github.com/SirVer/ultisnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -1,7 +1,6 @@
 " GENERAL
 "
 syntax on
-filetype plugin indent on
 
 " autoread files when changed from outside
 set autoread
@@ -29,7 +28,7 @@ set wildmenu
 set hidden
 
 " keep more history
-set history=100
+set history=500
 
 " ignore case when searching
 set ignorecase
@@ -92,7 +91,30 @@ set wildmode=longest,list:longest
 " :h 'completeopt'
 set completeopt=menu,preview
 
+" no annoying sound errors
+set tm=500
+set noerrorbells
+set novisualbell
+set t_vb=
+
+" setting up ctags path
+set tags+=./tags,tags
+
+" set shell to zsh
+set shell=zsh\ -l
+
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+augroup filetype_sql
+	" set mysql syntax highlighting to be automatic on .sql files, rather than sql
+	autocmd BufNewFile,BufRead *.sql set filetype=mysql
+augroup END
+
+augroup indent_tab
+	autocmd FileType python setlocal tabstop=4 shiftwidth=4 sts=4 noexpandtab
+	autocmd FileType javascript setlocal tabstop=4 shiftwidth=4 sts=4 noexpandtab
+	autocmd FileType html setlocal tabstop=4 shiftwidth=4 sts=4 noexpandtab
 augroup END

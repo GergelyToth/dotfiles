@@ -60,6 +60,9 @@ noremap <leader>sp [s
 noremap <leader>sa zg
 noremap <leader>s? z=
 
+" toggle paste
+noremap <leader>pp :set paste!<cr>
+
 " NERDTree shortcuts
 noremap <leader>nt :NERDTreeToggle<CR>
 noremap <leader>nf :NERDTreeFind<CR>
@@ -81,3 +84,39 @@ augroup comments_shortcuts
 	autocmd FileType python     nnoremap <buffer> <localleader>c I# <esc>
 	autocmd FileType vim        nnoremap <buffer> <localleader>c I" <esc>
 augroup END
+
+" F2 toggle Syntastic
+noremap <F2> :SyntasticToggleMode<cr>
+noremap <leader><F2> :SyntasticCheck<cr>
+
+" F8 to toggle white space
+noremap <F8> :set list!<cr>
+
+" toggle wrap
+noremap <leader>tw :set wrap!<cr>
+
+" K to grep word under cursor
+nnoremap K :vimgrep /<C-R><C-W>/ **/*
+
+" search for the nearest Makefile. once found execute make install...
+let s:makefileExists = 0
+function! CheckMakefile()
+	echo "Current cwd is:" getcwd()
+	if filereadable("Makefile")
+		echo "Makefile exists"
+		let s:makefileExists = 1
+	elseif
+		echo "Makefile doesn't exist"
+		let s:makefileExists = 0
+	endif
+	return s:makefileExists
+endfunction
+
+function! RunMakeInCWD()
+	call CheckMakefile()
+	if s:makefileExists
+		write
+		execute "!c5 make install"
+	endif
+endfunction
+noremap <leader>m :call RunMakeInCWD()<cr><cr>

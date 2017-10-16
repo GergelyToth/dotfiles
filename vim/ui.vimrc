@@ -16,12 +16,11 @@ set foldcolumn=1
 " keep three lines of code between edge of the screen
 set scrolloff=3
 
-" colorScheme
-set background=dark
-colorscheme elflord
-
 " color the 80'th column
 set colorcolumn=80
+
+" set title for terminal
+set title
 
 " NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -42,4 +41,24 @@ call NERDTreeHighlightFile('css',    'cyan',    'none', 'cyan',    '#151515')
 call NERDTreeHighlightFile('coffee', 'Red',     'none', 'red',     '#151515')
 call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', '#151515')
+
+set background=dark
+" use 256 colors when possible
+if &term =~? 'mlterm\|xterm\|screen-256color\|xterm-256color\|gnome-256color'
+	let t_Co=256
+	colorscheme monokain
+else
+    colorscheme elflord
+endif
+
+" highlight git gutter signs for more visibility
+highlight clear SignColumn
+highlight GitGutterAdd ctermbg=green ctermfg=black
+highlight GitGutterChange ctermbg=yellow ctermfg=black
+highlight GitGutterChange ctermbg=red ctermfg=black
+highlight GitGutterChangeDelete ctermbg=yellow ctermfg=black
+
+" airline symbol fallbacks
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
 
