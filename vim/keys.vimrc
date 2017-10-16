@@ -1,3 +1,10 @@
+" map leader to be ','
+let mapleader = ","
+let g:mapleader = ","
+" map localleader to be '\'
+let maplocalleader = "\\"
+let g:maplocalleader = "\\"
+
 " disable arrow keys
 :noremap <Up> <Nop>
 :noremap <Down> <Nop>
@@ -16,9 +23,6 @@
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" map leader to be ','
-let mapleader = ","
-let g:mapleader = ","
 
 " fast saving
 nnoremap <leader>w :w!<cr>
